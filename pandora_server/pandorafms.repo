@@ -1,0 +1,5 @@
+[artica_pandorafms]
+name=CentOS6 - PandoraFMS official repo
+baseurl=http://artica.es/centos6
+gpgcheck=0
+enabled=1
