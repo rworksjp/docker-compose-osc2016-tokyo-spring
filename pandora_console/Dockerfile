@@ -9,8 +9,6 @@ RUN yum install -y pandorafms_console
 RUN yum install -y mysql
 RUN yum clean all
 
-EXPOSE 80
-
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

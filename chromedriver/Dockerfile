@@ -9,7 +9,4 @@ RUN apt-get install -y supervisor
 RUN apt-get autoremove
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-EXPOSE 5900
-EXPOSE 9515
-
 CMD ["/usr/bin/supervisord"]

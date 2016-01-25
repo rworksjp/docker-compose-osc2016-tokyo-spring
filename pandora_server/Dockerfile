@@ -10,8 +10,6 @@ RUN yum install -y supervisor
 RUN yum clean all
 ADD supervisord.conf /etc/supervisord.conf
 
-EXPOSE 41121
-
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
