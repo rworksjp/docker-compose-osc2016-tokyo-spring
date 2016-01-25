@@ -24,6 +24,7 @@ pandora_server:
     - "41121:41121"
   links:
     - mysql
+    - chromedriver
   env_file: .env
 
 pandora_agent:
@@ -31,3 +32,8 @@ pandora_agent:
   hostname: pandora_agent
   links:
     - pandora_server
+
+chromedriver:
+  build: ./chromedriver
+  ports:
+    - "5900:5900"
