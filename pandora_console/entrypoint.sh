@@ -29,8 +29,10 @@ include (\$ownDir . "config_process.php");
 __EOF__
   chown apache:apache /var/www/html/pandora_console/include/config.php
   chmod 600 /var/www/html/pandora_console/include/config.php
-  mv /var/www/html/pandora_console/install.php /var/www/html/pandora_console/install.php.done
-  chmod 000 /var/www/html/pandora_console/install.php.done
+  if [ -e /var/www/html/pandora_console/install.php ]; then
+    mv /var/www/html/pandora_console/install.php /var/www/html/pandora_console/install.php.done
+    chmod 000 /var/www/html/pandora_console/install.php.done
+  fi
 fi
 
 exec "$@"
