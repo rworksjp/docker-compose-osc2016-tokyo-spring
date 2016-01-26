@@ -9,6 +9,7 @@ if [ "$(basename $1)" = 'httpd' ]; then
   mysql -u root -p$MYSQL_ROOT_PASSWORD -h mysql -e 'CREATE DATABASE IF NOT EXISTS `pandora`;'
   mysql -u root -p$MYSQL_ROOT_PASSWORD -h mysql -e "GRANT ALL PRIVILEGES ON \`pandora\`.* TO '$MYSQL_PANDORA_USER' IDENTIFIED BY '$MYSQL_PANDORA_PASSWORD';"
   mysql -u root -p$MYSQL_ROOT_PASSWORD -h mysql -e "FLUSH PRIVILEGES;"
+  # workaround
   sed -i 's/CREATE TABLE t/CREATE TABLE IF NOT EXISTS t/g' /var/www/html/pandora_console/pandoradb.sql
   mysql -u root -p$MYSQL_ROOT_PASSWORD -h mysql -D pandora < /var/www/html/pandora_console/pandoradb.sql
   mysql -u root -p$MYSQL_ROOT_PASSWORD -h mysql -D pandora < /var/www/html/pandora_console/pandoradb_data.sql || :
