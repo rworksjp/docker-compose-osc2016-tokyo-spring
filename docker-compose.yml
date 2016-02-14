@@ -30,6 +30,8 @@ pandora_server:
 pandora_agent:
   build: ./pandora_agent
   hostname: pandora_agent
+  ports:
+    - "3000:3000"
   links:
     - pandora_server
 

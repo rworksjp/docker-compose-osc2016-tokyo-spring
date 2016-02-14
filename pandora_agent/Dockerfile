@@ -1,20 +1,19 @@
-FROM centos:6
+FROM node:4.3-slim
 MAINTAINER Akihiro Uchida <auchida@rworks.jp>
 
-RUN yum distribution-synchronization -y
-RUN yum install -y epel-release
-ADD pandorafms.repo /etc/yum.repos.d/pandorafms.repo
-RUN yum makecache
-RUN yum install -y pandorafms_agent_unix
-RUN yum install -y supervisor
-RUN yum clean all
-ADD supervisord.conf /etc/supervisord.conf
+RUN echo "deb http://www.artica.es/debian/squeeze /" > /etc/apt/sources.list.d/pandorafms.list
+RUN apt-get update
+RUN apt-get install -y --force-yes pandorafms-agent-unix
+RUN apt-get install -y supervisor
+RUN apt-get autoremove
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
-# workaround for pandorafms_agent_unix missing required
-RUN yum install -y perl
+COPY webapp /opt/webapp
+WORKDIR /opt/webapp
+RUN npm install
 
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["/usr/bin/supervisord"]
