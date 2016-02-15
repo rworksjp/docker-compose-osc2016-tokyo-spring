@@ -6,6 +6,7 @@ RUN yum install -y epel-release
 ADD pandorafms.repo /etc/yum.repos.d/pandorafms.repo
 RUN yum makecache
 RUN yum install -y pandorafms_server
+RUN yum install -y nagios-plugins-http
 RUN yum install -y supervisor
 RUN yum clean all
 ADD supervisord.conf /etc/supervisord.conf
