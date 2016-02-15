@@ -7,9 +7,14 @@ ADD pandorafms.repo /etc/yum.repos.d/pandorafms.repo
 RUN yum makecache
 RUN yum install -y pandorafms_server
 RUN yum install -y nagios-plugins-http
+RUN yum install -y java-1.8.0-openjdk-headless
 RUN yum install -y supervisor
 RUN yum clean all
 ADD supervisord.conf /etc/supervisord.conf
+
+RUN mkdir -p /opt/selenese
+RUN curl -L -o /opt/selenese/selenese-runner.jar https://github.com/vmi/selenese-runner-java/releases/download/selenese-runner-java-2.4.0/selenese-runner.jar
+ADD testcase /opt/testcase
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
