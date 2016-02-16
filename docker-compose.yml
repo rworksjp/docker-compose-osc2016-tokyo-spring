@@ -1,41 +1,48 @@
-mysql:
-  hostname: mysql
-  container_name: mysql
-  image: mysql:5.6
-  ports:
-    - "3306:3306"
-  volumes:
-    - /opt/mysql:/var/lib/mysql
-  env_file: .env
+version: '2'
 
-pandora_console:
-  hostname: pandora_console
-  build: ./pandora_console
-  ports:
-    - "80:80"
-  links:
-    - mysql
-  env_file: .env
+services:
+  mysql:
+    hostname: mysql
+    container_name: mysql
+    image: mysql:5.6
+    ports:
+      - "3306:3306"
+    volumes:
+      - /opt/mysql:/var/lib/mysql
+    env_file: .env
 
-pandora_server:
-  build: ./pandora_server
-  hostname: pandora_server
-  ports:
-    - "41121:41121"
-  links:
-    - mysql
-    - chromedriver
-  env_file: .env
+  pandora_console:
+    hostname: pandora_console
+    build: ./pandora_console
+    ports:
+      - "80:80"
+    links:
+      - mysql
+    env_file: .env
 
-pandora_agent:
-  build: ./pandora_agent
-  hostname: pandora_agent
-  ports:
-    - "3000:3000"
-  links:
-    - pandora_server
+  pandora_server:
+    build: ./pandora_server
+    hostname: pandora_server
+    ports:
+      - "41121:41121"
+    links:
+      - mysql
+      - chromedriver
+    env_file: .env
 
-chromedriver:
-  build: ./chromedriver
-  ports:
-    - "5900:5900"
+  pandora_agent:
+    build: ./pandora_agent
+    hostname: pandora_agent
+    ports:
+      - "3000:3000"
+    links:
+      - pandora_server
+
+  chromedriver:
+    build: ./chromedriver
+    ports:
+      - "5900:5900"
+
+networks:
+  default:
+    driver: bridge
