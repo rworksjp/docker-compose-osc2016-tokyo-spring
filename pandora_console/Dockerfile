@@ -6,6 +6,7 @@ RUN yum install -y epel-release
 ADD pandorafms.repo /etc/yum.repos.d/pandorafms.repo
 RUN yum makecache
 RUN yum install -y pandorafms_console
+RUN yum install -y vlgothic-fonts && ln -s /usr/share/fonts/vlgothic/VL-Gothic-Regular.ttf /var/www/html/pandora_console/include/fonts/
 RUN yum install -y mysql
 RUN yum clean all
 

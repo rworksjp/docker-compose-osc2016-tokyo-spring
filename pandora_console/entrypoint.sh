@@ -34,6 +34,10 @@ __EOF__
     mv /var/www/html/pandora_console/install.php /var/www/html/pandora_console/install.php.done
     chmod 000 /var/www/html/pandora_console/install.php.done
   fi
+  sed -i 's/^max_input_time = .*/max_input_time = -1/' /etc/php.ini
+  sed -i 's/^max_execution_time = .*/max_execution_time = 0/' /etc/php.ini
+  sed -i 's/^upload_max_filesize = .*/upload_max_filesize = 800M/' /etc/php.ini
+  sed -i 's/^memory_limit.*/memory_limit = 500M/' /etc/php.ini
 fi
 
 exec "$@"
