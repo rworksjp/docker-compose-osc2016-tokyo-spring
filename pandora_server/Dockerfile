@@ -14,6 +14,8 @@ ADD supervisord.conf /etc/supervisord.conf
 
 RUN mkdir -p /opt/selenese
 RUN curl -L -o /opt/selenese/selenese-runner.jar https://github.com/vmi/selenese-runner-java/releases/download/selenese-runner-java-2.4.0/selenese-runner.jar
+ADD selenese-runner /opt/selenese/selenese-runner
+RUN chmod +x /opt/selenese/selenese-runner
 ADD testcase /opt/testcase
 
 ADD entrypoint.sh /entrypoint.sh

@@ -1,2 +1,2 @@
 #!/bin/sh
-java -jar /opt/selenese/selenese-runner.jar "$@" && echo 1 || echo 0
+java -jar /opt/selenese/selenese-runner.jar "$@" > /dev/null && echo 1 || echo 0
