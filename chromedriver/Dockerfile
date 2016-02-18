@@ -12,4 +12,8 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # workaround for missing runtime for chromium
 RUN apt-get install -y libexif12
 
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
 CMD ["/usr/bin/supervisord"]
