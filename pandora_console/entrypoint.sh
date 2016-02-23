@@ -38,6 +38,10 @@ __EOF__
   sed -i 's/^max_execution_time = .*/max_execution_time = 0/' /etc/php.ini
   sed -i 's/^upload_max_filesize = .*/upload_max_filesize = 800M/' /etc/php.ini
   sed -i 's/^memory_limit.*/memory_limit = 500M/' /etc/php.ini
+  mysql -u root -p$MYSQL_ROOT_PASSWORD -h mysql -D pandora -e "UPDATE tconfig SET value = 'ja' WHERE token = 'language';"
+  mysql -u root -p$MYSQL_ROOT_PASSWORD -h mysql -D pandora -e "UPDATE tconfig SET value = 'Y/m/d&#x20;H:i:s' WHERE token = 'date_format';"
+  mysql -u root -p$MYSQL_ROOT_PASSWORD -h mysql -D pandora -e "UPDATE tconfig SET value = 'Asia/Tokyo' WHERE token = 'timezone';"
+  mysql -u root -p$MYSQL_ROOT_PASSWORD -h mysql -D pandora -e "UPDATE tconfig SET value = '/var/www/html/pandora_console/include/fonts/VL-Gothic-Regular.ttf' WHERE token = 'fontpath';"
 fi
 
 exec "$@"
