@@ -18,6 +18,8 @@ ADD selenese-runner /opt/selenese/selenese-runner
 RUN chmod +x /opt/selenese/selenese-runner
 ADD testcase /opt/testcase
 
+ADD register.pl /
+RUN chmod +x /register.pl
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
