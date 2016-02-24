@@ -1,6 +1,7 @@
 # docker-compose-pandorafms
 
-docker-compose definition for PandoraFMS
+docker-compose definition for PandoraFMS,
+especially for demo on Open Source Conference 2016 Tokyo Spring.
 
 ## Requirements
 
