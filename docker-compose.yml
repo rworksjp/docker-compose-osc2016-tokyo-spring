@@ -4,7 +4,6 @@ services:
   mysql:
     image: rworksjp/mysql-osc-2016-tokyo-spring
     build: ./mysql
-    hostname: mysql
     ports:
       - "3306:3306"
     volumes:
@@ -14,7 +13,6 @@ services:
   pandora_console:
     image: rworksjp/pandora_console-osc-2016-tokyo-spring
     build: ./pandora_console
-    hostname: pandora_console
     ports:
       - "80:80"
     links:
