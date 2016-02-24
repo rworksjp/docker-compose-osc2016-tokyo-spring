@@ -2,6 +2,11 @@
 
 docker-compose definition for PandoraFMS
 
+## Requirements
+
+- docker-compose >= 1.6.0
+- docker >= 1.9.1
+
 ## Usage
 
 ```console
