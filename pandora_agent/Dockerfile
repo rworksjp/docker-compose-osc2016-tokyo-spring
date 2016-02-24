@@ -1,9 +1,7 @@
 FROM node:4.3-slim
 MAINTAINER Akihiro Uchida <auchida@rworks.jp>
 
-RUN echo "deb http://www.artica.es/debian/squeeze /" > /etc/apt/sources.list.d/pandorafms.list
-RUN apt-get update
-RUN apt-get install -y --force-yes pandorafms-agent-unix
+RUN echo "deb http://www.artica.es/debian/squeeze /" > /etc/apt/sources.list.d/pandorafms.list && apt-get update && apt-get install -y --force-yes pandorafms-agent-unix
 RUN apt-get install -y supervisor
 RUN apt-get autoremove
 
