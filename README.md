@@ -15,7 +15,7 @@ $ edit .env
 ```
 
 ```console
-$ docker-compose build
+$ docker-compose pull
 $ docker-compose up -d mysql
 $ docker-compose up -d pandora_console
 $ docker-compose up -d pandora_server
