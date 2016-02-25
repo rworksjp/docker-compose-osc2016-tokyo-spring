@@ -43,7 +43,6 @@ services:
     image: rworksjp/chromedriver-osc-2016-tokyo-spring
     build: ./chromedriver
     ports:
-      - "5800:5800"
       - "5900:5900"
 
 networks:

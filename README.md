@@ -27,9 +27,9 @@ $ docker-compose up -d pandora_agent
 
 ```console
 $ docker-compose ps
-                      Name                                     Command               State                       Ports
--------------------------------------------------------------------------------------------------------------------------------------------
-dockercomposeosc2016tokyospring_chromedriver_1      /entrypoint.sh /usr/bin/su ...   Up      0.0.0.0:5800->5800/tcp, 0.0.0.0:5900->5900/tcp
+                      Name                                     Command               State            Ports
+---------------------------------------------------------------------------------------------------------------------
+dockercomposeosc2016tokyospring_chromedriver_1      /entrypoint.sh /usr/bin/su ...   Up      0.0.0.0:5900->5900/tcp
 dockercomposeosc2016tokyospring_mysql_1             /entrypoint.sh mysqld            Up      0.0.0.0:3306->3306/tcp
 dockercomposeosc2016tokyospring_pandora_agent_1     /entrypoint.sh /usr/bin/su ...   Up      0.0.0.0:3000->3000/tcp
 dockercomposeosc2016tokyospring_pandora_console_1   /entrypoint.sh /usr/sbin/h ...   Up      0.0.0.0:80->80/tcp
