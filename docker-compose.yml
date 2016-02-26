@@ -44,6 +44,7 @@ services:
     build: ./chromedriver
     ports:
       - "5900:5900"
+    env_file: .env
 
 networks:
   default:
