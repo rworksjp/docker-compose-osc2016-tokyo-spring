@@ -34,3 +34,11 @@ dockercomposeosc2016tokyospring_pandora_agent_1     /entrypoint.sh /usr/bin/su .
 dockercomposeosc2016tokyospring_pandora_console_1   /entrypoint.sh /usr/sbin/h ...   Up      0.0.0.0:80->80/tcp
 dockercomposeosc2016tokyospring_pandora_server_1    /entrypoint.sh /usr/bin/su ...   Up      0.0.0.0:41121->41121/tcp
 ```
+
+## Demonstration
+
+You could see scenario monitoring behavior on chromedriver with connecting tcp://{{ docker_host }}:5900 
+with VNC client.
+
+![scenario monitoring demonstration](./scenario-monitoring.gif "scenario monitoring demonstration")
+
