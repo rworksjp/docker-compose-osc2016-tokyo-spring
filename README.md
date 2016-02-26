@@ -13,11 +13,10 @@ Using Docker Compose file format version 2
 ## Usage
 
 ```console
+$ git clone https://github.com/rworksjp/docker-compose-osc2016-tokyo-spring
+$ cd docker-compose-osc2016-tokyo-spring
 $ cp dot.env .env
 $ edit .env
-```
-
-```console
 $ docker-compose pull
 $ docker-compose up -d mysql
 $ docker-compose up -d pandora_console # should wait until mysql connection is ready
