@@ -37,8 +37,14 @@ dockercomposeosc2016tokyospring_pandora_server_1    /entrypoint.sh /usr/bin/su .
 
 ## Demonstration
 
-You could see scenario monitoring behavior on chromedriver with connecting tcp://{{ docker_host }}:5900 
-with VNC client.
+pandora_console is available on `http://$DOCKER_HOST:80/pandora_console` with user: `admin` password: `pandora`.
+
+`pandora_agent` docker image includes SPA, single page application,
+with [React](https://facebook.github.io/react/) and [Express](http://expressjs.com/),
+this is just a toy application but a good example to show power of monitoring with Selenium WebDriver,
+you could check this app on `http://$DOCKER_HOST:3000/`.
+
+`vnc://$DOCKER_HOST:5900` is available to check scenario monitoring behavior.
 
 ![scenario monitoring demonstration](./scenario-monitoring.gif "scenario monitoring demonstration")
 
