@@ -1,5 +1,7 @@
 # docker-compose-osc2016-tokyo-spring
 
+[![License](https://img.shields.io/github/license/rworksjp/docker-compose-osc2016-tokyo-spring.svg)](https://tldrlegal.com/license/gnu-general-public-license-v2)
+
 docker-compose definition for the purpose to demonstrate 
 the web monitoring with PandoraFMS including Selenium WebDriver
 at Open Source Conference 2016 Tokyo Spring.
@@ -21,6 +23,7 @@ $ edit .env
 $ docker-compose pull
 $ docker-compose up -d mysql
 $ docker-compose up -d pandora_console # should wait until mysql connection is ready
+$ docker-compose up -d chromedriver
 $ docker-compose up -d pandora_server
 $ docker-compose up -d pandora_agent
 ```
@@ -35,6 +38,19 @@ dockercomposeosc2016tokyospring_pandora_agent_1     /entrypoint.sh /usr/bin/su .
 dockercomposeosc2016tokyospring_pandora_console_1   /entrypoint.sh /usr/sbin/h ...   Up      0.0.0.0:80->80/tcp
 dockercomposeosc2016tokyospring_pandora_server_1    /entrypoint.sh /usr/bin/su ...   Up      0.0.0.0:41121->41121/tcp
 ```
+
+## Docker Images
+
+- [rworksjp/chromedriver-osc-2016-tokyo-spring](https://hub.docker.com/r/rworksjp/chromedriver-osc-2016-tokyo-spring/)
+  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/rworksjp/chromedriver-osc-2016-tokyo-spring/latest.svg)]()
+- [rworksjp/mysql-osc-2016-tokyo-spring](https://hub.docker.com/r/rworksjp/mysql-osc-2016-tokyo-spring/)
+  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/rworksjp/mysql-osc-2016-tokyo-spring/latest.svg)]()
+- [rworksjp/pandora_agent-osc-2016-tokyo-spring](https://hub.docker.com/r/rworksjp/pandora_agent-osc-2016-tokyo-spring/)
+  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/rworksjp/pandora_agent-osc-2016-tokyo-spring/latest.svg)]()
+- [rworksjp/pandora_console-osc-2016-tokyo-spring](https://hub.docker.com/r/rworksjp/pandora_console-osc-2016-tokyo-spring/)
+  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/rworksjp/pandora_console-osc-2016-tokyo-spring/latest.svg)]()
+- [rworksjp/pandora_server-osc-2016-tokyo-spring](https://hub.docker.com/r/rworksjp/pandora_server-osc-2016-tokyo-spring/)
+  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/rworksjp/pandora_server-osc-2016-tokyo-spring/latest.svg)]()
 
 ## Demonstration
 
