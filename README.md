@@ -1,7 +1,8 @@
 # docker-compose-osc2016-tokyo-spring
 
-docker-compose definition for PandoraFMS,
-especially for a demo on Open Source Conference 2016 Tokyo Spring.
+docker-compose definition for the purpose to demonstrate 
+the web monitoring with PandoraFMS including Selenium WebDriver
+at Open Source Conference 2016 Tokyo Spring.
 
 ## Requirements
 
@@ -37,14 +38,14 @@ dockercomposeosc2016tokyospring_pandora_server_1    /entrypoint.sh /usr/bin/su .
 
 ## Demonstration
 
-pandora_console is available on `http://$DOCKER_HOST:80/pandora_console` with user: `admin` password: `pandora`.
+pandora_console is available on `http://$DOCKER_HOST:80/pandora_console` with user: `admin` and password: `pandora`.
 
 `pandora_agent` docker image includes SPA, single page application,
-with [React](https://facebook.github.io/react/) and [Express](http://expressjs.com/),
-this is just a toy application but a good example to show power of monitoring with Selenium WebDriver,
-you could check this app on `http://$DOCKER_HOST:3000/`.
+with [ReactJS](https://facebook.github.io/react/) and [ExpressJS](http://expressjs.com/),
+this is just a toy application but a good example to show the power of web monitoring
+with Selenium WebDriver, you could check this app on `http://$DOCKER_HOST:3000/`.
 
-`vnc://$DOCKER_HOST:5900` is available to check scenario monitoring behavior.
+`vnc://$DOCKER_HOST:5900` is available to check monitoring behavior with chromedriver.
 
 ![scenario monitoring demonstration](./scenario-monitoring.gif "scenario monitoring demonstration")
 
