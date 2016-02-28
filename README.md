@@ -65,3 +65,14 @@ with Selenium WebDriver, you could check webapp on `http://${DOCKER_HOST}:3000/`
 
 ![scenario monitoring demonstration](./scenario-monitoring.gif "scenario monitoring demonstration")
 
+## License
+
+Contents in this repository basically licensed under the [GPLv2](./LICENSE) and 
+some JavaScript libraries in [pandora_agent/webapp/public/scripts](pandora_agent/webapp/public/scripts) are separately licensed:
+
+- [react/react-dom](https://github.com/facebook/react) is licensed under the [BSD 3-Clause License](https://github.com/facebook/react/blob/master/LICENSE)
+- [babel](https://github.com/babel/babel/blob/master/LICENSE) is licensed under the [MIT License](https://github.com/babel/babel/blob/master/LICENSE)
+- [superagent](https://github.com/visionmedia/superagent) is licensed under the [MIT License](https://github.com/visionmedia/superagent/blob/master/LICENSE)
+
+License for distributed Docker images follows one of the base Linux distribution and installed packages.
+
