@@ -2,8 +2,7 @@
 
 [![License](https://img.shields.io/github/license/rworksjp/docker-compose-osc2016-tokyo-spring.svg)](https://tldrlegal.com/license/gnu-general-public-license-v2)
 
-docker-compose definition for the purpose to demonstrate 
-the web monitoring with PandoraFMS including Selenium WebDriver
+docker-compose definition to demonstrate the web monitoring with PandoraFMS including Selenium WebDriver
 at Open Source Conference 2016 Tokyo Spring.
 
 ## Requirements
@@ -33,11 +32,11 @@ $ docker-compose up -d pandora_agent
 $ docker-compose ps
                       Name                                     Command               State            Ports
 ---------------------------------------------------------------------------------------------------------------------
-dockercomposeosc2016tokyospring_chromedriver_1      /entrypoint.sh /usr/bin/su ...   Up      0.0.0.0:5900->5900/tcp
+dockercomposeosc2016tokyospring_chromedriver_1      /bin/bash /entrypoint.sh / ...   Up      0.0.0.0:5900->5900/tcp
 dockercomposeosc2016tokyospring_mysql_1             /entrypoint.sh mysqld            Up      0.0.0.0:3306->3306/tcp
-dockercomposeosc2016tokyospring_pandora_agent_1     /entrypoint.sh /usr/bin/su ...   Up      0.0.0.0:3000->3000/tcp
-dockercomposeosc2016tokyospring_pandora_console_1   /entrypoint.sh /usr/sbin/h ...   Up      0.0.0.0:80->80/tcp
-dockercomposeosc2016tokyospring_pandora_server_1    /entrypoint.sh /usr/bin/su ...   Up      0.0.0.0:41121->41121/tcp
+dockercomposeosc2016tokyospring_pandora_agent_1     /bin/bash /entrypoint.sh / ...   Up      0.0.0.0:3000->3000/tcp
+dockercomposeosc2016tokyospring_pandora_console_1   /bin/bash /entrypoint.sh / ...   Up      0.0.0.0:80->80/tcp
+dockercomposeosc2016tokyospring_pandora_server_1    /bin/bash /entrypoint.sh / ...   Up      0.0.0.0:41121->41121/tcp
 ```
 
 ## Docker Images
@@ -55,14 +54,14 @@ dockercomposeosc2016tokyospring_pandora_server_1    /entrypoint.sh /usr/bin/su .
 
 ## Demonstration
 
-pandora_console is available on `http://${DOCKER_HOST}:80/pandora_console` with user: `admin` and password: `pandora`.
+`pandora_console` is available on `http://${DOCKER_HOST}:80/pandora_console` with user: `admin` and password: `pandora`.
 
-`pandora_agent` docker image includes SPA, single page application,
-with [ReactJS](https://facebook.github.io/react/) and [ExpressJS](http://expressjs.com/),
-this is just a toy application but a good example to show the power of web monitoring
-with Selenium WebDriver, you could check this app on `http://${DOCKER_HOST}:3000/`.
+`pandora_agent` docker image includes simple single page webapp
+by [React](https://facebook.github.io/react/) and [Express](http://expressjs.com/).
+It is just a toy application, but a good example to show the power of web monitoring
+with Selenium WebDriver, you could check webapp on `http://${DOCKER_HOST}:3000/`.
 
-`vnc://${DOCKER_HOST}:5900` is available to check monitoring behavior with chromedriver.
+`vnc://${DOCKER_HOST}:5900` is available to check how `chromedriver` image behave.
 
 ![scenario monitoring demonstration](./scenario-monitoring.gif "scenario monitoring demonstration")
 
