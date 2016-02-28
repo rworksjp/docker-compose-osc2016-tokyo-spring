@@ -55,14 +55,14 @@ dockercomposeosc2016tokyospring_pandora_server_1    /entrypoint.sh /usr/bin/su .
 
 ## Demonstration
 
-pandora_console is available on `http://$DOCKER_HOST:80/pandora_console` with user: `admin` and password: `pandora`.
+pandora_console is available on `http://${DOCKER_HOST}:80/pandora_console` with user: `admin` and password: `pandora`.
 
 `pandora_agent` docker image includes SPA, single page application,
 with [ReactJS](https://facebook.github.io/react/) and [ExpressJS](http://expressjs.com/),
 this is just a toy application but a good example to show the power of web monitoring
-with Selenium WebDriver, you could check this app on `http://$DOCKER_HOST:3000/`.
+with Selenium WebDriver, you could check this app on `http://${DOCKER_HOST}:3000/`.
 
-`vnc://$DOCKER_HOST:5900` is available to check monitoring behavior with chromedriver.
+`vnc://${DOCKER_HOST}:5900` is available to check monitoring behavior with chromedriver.
 
 ![scenario monitoring demonstration](./scenario-monitoring.gif "scenario monitoring demonstration")
 
