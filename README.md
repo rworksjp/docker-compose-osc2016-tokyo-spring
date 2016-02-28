@@ -54,12 +54,13 @@ dockercomposeosc2016tokyospring_pandora_server_1    /bin/bash /entrypoint.sh / .
 
 ## Demonstration
 
-`pandora_console` is available on `http://${DOCKER_HOST}:80/pandora_console` with user: `admin` and password: `pandora`.
+`pandora_console` is available on `http://${DOCKER_HOST}:80/pandora_console`
+with user: `admin` and password: `pandora`.
 
-`pandora_agent` docker image includes simple single page webapp
+`pandora_agent` docker image includes single page webapp
 by [React](https://facebook.github.io/react/) and [Express](http://expressjs.com/).
-It is just a toy application, but a good example to show the power of web monitoring
-with Selenium WebDriver, you could check webapp on `http://${DOCKER_HOST}:3000/`.
+It's just a toy webapp, but a good example to show the power of web monitoring
+with Selenium WebDriver, webapp is also available on `http://${DOCKER_HOST}:3000/`.
 
 `vnc://${DOCKER_HOST}:5900` is available to check how `chromedriver` image behave.
 
@@ -67,12 +68,16 @@ with Selenium WebDriver, you could check webapp on `http://${DOCKER_HOST}:3000/`
 
 ## License
 
-Contents in this repository basically licensed under the [GPLv2](./LICENSE) and 
-some JavaScript libraries in [pandora_agent/webapp/public/scripts](pandora_agent/webapp/public/scripts) are separately licensed:
+Contents in this repository basically licensed under the [GPLv2](./LICENSE) and
+[pandora_agent/webapp/public/scripts](pandora_agent/webapp/public/scripts) includes
+following libraries licensed under the GPLv2 compatible licenses:
 
-- [react/react-dom](https://github.com/facebook/react) is licensed under the [BSD 3-Clause License](https://github.com/facebook/react/blob/master/LICENSE)
-- [babel](https://github.com/babel/babel/blob/master/LICENSE) is licensed under the [MIT License](https://github.com/babel/babel/blob/master/LICENSE)
-- [superagent](https://github.com/visionmedia/superagent) is licensed under the [MIT License](https://github.com/visionmedia/superagent/blob/master/LICENSE)
+- [react/react-dom](https://github.com/facebook/react) is licensed under
+  the [BSD 3-Clause License](https://github.com/facebook/react/blob/master/LICENSE)
+- [babel-core](https://github.com/babel/babel/blob/master/LICENSE) is licensed under
+  the [MIT License](https://github.com/babel/babel/blob/master/LICENSE)
+- [superagent](https://github.com/visionmedia/superagent) is licensed under
+  the [MIT License](https://github.com/visionmedia/superagent/blob/master/LICENSE)
 
-License for distributed Docker images follows one of the base Linux distribution and installed packages.
-
+Licenses for distributed Docker images follow one of the base Linux distribution and installed packages
+in addition to one of this repository.
