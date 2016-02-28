@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ue -o pipefail
 
 rm -f /tmp/.X0-lock
 if [[ "$XVFB_SCREENSIZE" =~ ^[[:digit:]]{1,}x[[:digit:]]{1,}x(8|16|24)$ ]]; then
