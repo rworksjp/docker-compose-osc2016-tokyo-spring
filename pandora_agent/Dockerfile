@@ -1,13 +1,16 @@
 FROM node:4.3-slim
 MAINTAINER Akihiro Uchida <auchida@rworks.jp>
 
-RUN echo "deb http://www.artica.es/debian/squeeze /" > /etc/apt/sources.list.d/pandorafms.list && apt-get update && apt-get install -y --force-yes pandorafms-agent-unix
-RUN apt-get install -y supervisor
-RUN apt-get autoremove
+RUN apt-get update \
+ && apt-get install -y supervisor \
+ && apt-get clean
+RUN echo "deb http://www.artica.es/debian/squeeze /" > /etc/apt/sources.list.d/pandorafms.list \
+ && apt-get update \
+ && apt-get install -y --force-yes pandorafms-agent-unix \
+ && apt-get clean
 
 ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
 
 COPY webapp /opt/webapp
 WORKDIR /opt/webapp
