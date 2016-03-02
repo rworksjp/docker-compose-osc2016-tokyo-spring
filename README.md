@@ -73,7 +73,8 @@ Contents in this repository basically licensed under the [GPLv2](./LICENSE) and
 following libraries licensed under the GPLv2 compatible licenses:
 
 - [react/react-dom](https://github.com/facebook/react) is licensed under
-  the [BSD 3-Clause License](https://github.com/facebook/react/blob/master/LICENSE)
+  the [BSD 3-Clause License](https://github.com/facebook/react/blob/master/LICENSE) 
+  with [additional patent grants](https://github.com/facebook/react/blob/master/PATENTS)
 - [babel-core](https://github.com/babel/babel/blob/master/LICENSE) is licensed under
   the [MIT License](https://github.com/babel/babel/blob/master/LICENSE)
 - [superagent](https://github.com/visionmedia/superagent) is licensed under
