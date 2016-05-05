@@ -1,6 +1,6 @@
 # docker-compose-osc2016-tokyo-spring
 
-[![License](https://img.shields.io/github/license/rworksjp/docker-compose-osc2016-tokyo-spring.svg)](https://tldrlegal.com/license/gnu-general-public-license-v2)
+[![License](https://img.shields.io/github/license/rworksjp/docker-compose-osc2016-tokyo-spring.svg?maxAge=2592000)](https://tldrlegal.com/license/gnu-general-public-license-v2)
 
 docker-compose definition to demonstrate the web monitoring with PandoraFMS including Selenium WebDriver
 at Open Source Conference 2016 Tokyo Spring.
