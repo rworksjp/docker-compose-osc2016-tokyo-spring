@@ -42,15 +42,15 @@ dockercomposeosc2016tokyospring_pandora_server_1    /bin/bash /entrypoint.sh / .
 ## Docker Images
 
 - [rworksjp/chromedriver-osc-2016-tokyo-spring](https://hub.docker.com/r/rworksjp/chromedriver-osc-2016-tokyo-spring/)
-  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/rworksjp/chromedriver-osc-2016-tokyo-spring/latest.svg)](https://imagelayers.io/?images=rworksjp%2Fchromedriver-osc-2016-tokyo-spring:latest)
+  [![ImageLayers Layers](https://imagelayers.io/badge/rworksjp/chromedriver-osc-2016-tokyo-spring:latest.svg)](https://imagelayers.io/?images=rworksjp%2Fchromedriver-osc-2016-tokyo-spring:latest)
 - [rworksjp/mysql-osc-2016-tokyo-spring](https://hub.docker.com/r/rworksjp/mysql-osc-2016-tokyo-spring/)
-  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/rworksjp/mysql-osc-2016-tokyo-spring/latest.svg)](https://imagelayers.io/?images=rworksjp%2Fmysql-osc-2016-tokyo-spring:latest)
+  [![ImageLayers Layers](https://imagelayers.io/badge/rworksjp/mysql-osc-2016-tokyo-spring:latest.svg)](https://imagelayers.io/?images=rworksjp%2Fmysql-osc-2016-tokyo-spring:latest)
 - [rworksjp/pandora_agent-osc-2016-tokyo-spring](https://hub.docker.com/r/rworksjp/pandora_agent-osc-2016-tokyo-spring/)
-  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/rworksjp/pandora_agent-osc-2016-tokyo-spring/latest.svg)](https://imagelayers.io/?images=rworksjp%2Fpandora_agent-osc-2016-tokyo-spring:latest)
+  [![ImageLayers Layers](https://imagelayers.io/badge/rworksjp/pandora_agent-osc-2016-tokyo-spring:latest.svg)](https://imagelayers.io/?images=rworksjp%2Fpandora_agent-osc-2016-tokyo-spring:latest)
 - [rworksjp/pandora_console-osc-2016-tokyo-spring](https://hub.docker.com/r/rworksjp/pandora_console-osc-2016-tokyo-spring/)
-  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/rworksjp/pandora_console-osc-2016-tokyo-spring/latest.svg)](https://imagelayers.io/?images=rworksjp%2Fpandora_console-osc-2016-tokyo-spring:latest)
+  [![ImageLayers Layers](https://imagelayers.io/badge/rworksjp/pandora_console-osc-2016-tokyo-spring:latest.svg)](https://imagelayers.io/?images=rworksjp%2Fpandora_console-osc-2016-tokyo-spring:latest)
 - [rworksjp/pandora_server-osc-2016-tokyo-spring](https://hub.docker.com/r/rworksjp/pandora_server-osc-2016-tokyo-spring/)
-  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/rworksjp/pandora_server-osc-2016-tokyo-spring/latest.svg)](https://imagelayers.io/?images=rworksjp%2Fpandora_server-osc-2016-tokyo-spring:latest)
+  [![ImageLayers Layers](https://imagelayers.io/badge/rworksjp/pandora_server-osc-2016-tokyo-spring:latest.svg)](https://imagelayers.io/?images=rworksjp%2Fpandora_server-osc-2016-tokyo-spring:latest)
 
 ## Demonstration
 
